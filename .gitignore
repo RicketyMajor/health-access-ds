@@ -1,0 +1,22 @@
+# Datos
+data/raw/
+data/processed/
+*.csv
+*.zip
+*.parquet
+*.shp
+*.shx
+*.dbf
+*.geojson
+
+# Entornos y Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env
+
+# Jupyter y Colab
+.ipynb_checkpoints/
