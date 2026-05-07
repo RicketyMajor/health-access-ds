@@ -14,7 +14,6 @@ def extraer_farmacias():
         'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:123.0) Gecko/20100101 Firefox/123.0'
     }
 
-    # Asegurarnos de que la carpeta exista subiendo un nivel desde src/ hasta data/raw/
     directorio_guardado = os.path.join(
         os.path.dirname(__file__), '..', 'data', 'raw')
     os.makedirs(directorio_guardado, exist_ok=True)
@@ -27,7 +26,6 @@ def extraer_farmacias():
             datos_json = response.json()
             print(f"Se descargaron {len(datos_json)} farmacias {tipo}.")
 
-            # Nombrar el archivo dinámicamente
             nombre_archivo = f"farmacias_{tipo.lower()}.json"
             ruta_guardado = os.path.join(directorio_guardado, nombre_archivo)
 
